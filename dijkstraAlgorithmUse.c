@@ -4,14 +4,14 @@
 #include <math.h>
 #include <locale.h>
 
-//Vari·veis
+//Vari√°veis
 int destino, origem, vertices = 5;
 float custo, *custos = NULL; 
 
-//PrototipaÁ„o
+//Prototipa√ß√£o
 void dijkstra(int vertices, int origem, int destino, float *custos);
 
-//FunÁ„o principal
+//Fun√ß√£o principal
 int main(int argc, char **argv) {
 	setlocale(LC_ALL, "Portuguese");
 	int opt = -1;
@@ -23,7 +23,6 @@ int main(int argc, char **argv) {
 		custos[c] = -1; 
 	}
 	
-	// RA: 22191756-5
 	
  	custos[(1-1) * 5 + 2 - 1] = 2 * 6.596;
  	custos[(1-1) * 5 + 3 - 1] = 2 * 6.596;
@@ -50,7 +49,7 @@ int main(int argc, char **argv) {
   	}
  
 	do {
-		printf("\nInforme o nÛ inicial:");
+		printf("\nInforme o n√≥ inicial:");
 		scanf("%d",&origem);
 	} while (origem < 1 || origem > 5);
 
@@ -65,7 +64,7 @@ int main(int argc, char **argv) {
 	return 0;
 }
 
-//ImplementaÁ„o do algoritmo de Dijkstra
+//Implementa√ß√£o do algoritmo de Dijkstra
 void dijkstra(int vertices, int origem, int destino, float *custos) {
 	int i, v, cont = 0;
 	int *ant, *tmp; 
