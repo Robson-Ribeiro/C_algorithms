@@ -8,7 +8,7 @@
 #define D 1
 #define R -1
 
-//Tipo nÛ
+//Tipo n√≥
 typedef struct NO {
 	int dado;
 	struct NO *esq;
@@ -16,27 +16,27 @@ typedef struct NO {
 	struct NO *pai;
 } NO;
 
-//Tipo ·rvore
+//Tipo √°rvore
 typedef struct ARVORE{
 	NO *raiz;
 }ARVORE;
 
-//DeclaraÁ„o da ·rvore
+//Declara√ß√£o da √°rvore
 ARVORE a;
 
-//ProtÛtipos das funÁıes
+//Prot√≥tipos das fun√ß√µes
 void inicializaArvore(ARVORE arv);
 void inicializaNo(NO* n, int val);
 void insereNoArvoreOrdenada(int valor);
 void preOrdem(NO* raiz);
 
-//FunÁ„o que sempre deve ser chamada ao se criar uma nova ·rvore
+//Fun√ß√£o que sempre deve ser chamada ao se criar uma nova √°rvore
 void inicializaArvore(ARVORE arv)
 {
 	arv.raiz = NULL;
 }
 
-//FunÁ„o utilizada para inicializar um novo nÛ na ·rvore
+//Fun√ß√£o utilizada para inicializar um novo n√≥ na √°rvore
 void inicializaNo(NO* n, int val){
 	if(!n)
 	{
@@ -49,7 +49,7 @@ void inicializaNo(NO* n, int val){
 	n->dado = val;
 }
 
-//FunÁ„o que realiza a inserÁ„o de maneira ordenada
+//Fun√ß√£o que realiza a inser√ß√£o de maneira ordenada
 void insereNoArvoreOrdenada(int valor)
 {
 	NO* corrente = a.raiz;
@@ -83,7 +83,7 @@ void insereNoArvoreOrdenada(int valor)
 	}
 }
 
-//Executa o caminhamento prÈ-ordem a partir do nÛ indicado por "raiz"
+//Executa o caminhamento pr√©-ordem a partir do n√≥ indicado por "raiz"
 void preOrdem(NO* raiz){
 	if(raiz){
 		printf("%d \t", raiz->dado);
@@ -97,14 +97,14 @@ int main()
 	setlocale(LC_ALL, "Portuguese");
 	inicializaArvore(a);
 
-	// ESCOLHA A COMPOSI«√O DA ¡RVORE
+	// ESCOLHA A COMPOSI√á√ÉO DA √ÅRVORE
 	int i, RA[9] = {9, 9, 9, 9, 9, 9, 9, 9, 9}; 
 	
 	for(i = 0; i < 9; i++) {
 		insereNoArvoreOrdenada(RA[i]);
 	}	
 
-	printf("Caminhamento prÈ-ordem: \n\n");
+	printf("Caminhamento pr√©-ordem: \n\n");
 	preOrdem(a.raiz);
 	return 0;
 }
